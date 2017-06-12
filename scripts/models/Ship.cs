@@ -33,6 +33,14 @@ namespace Models {
 			this.sr = this.gmob.GetComponent<SpriteRenderer>();
 		}
 
+		protected void setSprite(string spriteURI){
+			this.sr.sprite = (Sprite) Resources.Load(spriteURI, typeof(Sprite));
+		}
+
+		public void setPosition(Vector2 position){
+			this.transform.position = position;
+		}
+
 	}
 
 }
